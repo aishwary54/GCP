@@ -1,0 +1,9 @@
+import base64
+from gcloud import storage
+
+def hello_pubsub(event, context):
+      pubsub_message = base64.b64decode(event['data']).decode('utf-8')
+      client = storage.Client()
+      bucket = client.get_bucket('ai-sdk-bucket')
+      blob = bucket.blob('test-file.json')
+      blob.upload_from_string(pubsub_message)
