@@ -1,0 +1,10 @@
+steps:
+1.create a bucket in gcs.
+
+2.upload static website html pages in the bucket.(index.html in this case )
+
+3.make them public by allowing reader access to all.
+
+4. click on index.html file in bucket, and get its url.
+
+5.the static website is successfully hosted.
